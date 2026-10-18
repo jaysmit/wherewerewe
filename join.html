@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add your places — Where Were We</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="join">
+<div class="join-shell">
+  <div class="join-top">
+    <a class="icon-btn" href="map.html" aria-label="Back to the map">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </a>
+    <span class="group-name" style="font-size:13px;padding:6px 14px">The three of us</span>
+    <span style="width:44px"></span>
+  </div>
+
+  <div>
+    <h1>Where have you called home?</h1>
+    <p class="sub">We only keep the city and the years. Your photos never leave your phone.</p>
+  </div>
+
+  <div class="sources" role="group" aria-label="Where to find your places">
+    <button type="button" class="source" aria-pressed="true" style="--t:#FFF1E5"><b>Camera roll</b><span>Scanned on your phone</span></button>
+    <button type="button" class="source" aria-pressed="false" style="--t:#E8EAFB"><b>Facebook</b><span>Your check-ins and tags</span></button>
+    <button type="button" class="source" aria-pressed="false" style="--t:#FDE7F1"><b>Instagram file</b><span>Upload your data download</span></button>
+    <button type="button" class="source" aria-pressed="false" style="--t:#F1E6FA"><b>Type them in</b><span>City and years, quick</span></button>
+  </div>
+
+  <div class="found-head">
+    <h2>We found <span id="found">6</span> places</h2>
+    <span><span id="shared">6</span> shared</span>
+  </div>
+
+  <div class="stays" id="stays"></div>
+
+  <a class="btn btn-primary" href="map.html">Add to our map</a>
+</div>
+
+<script>
+(function () {
+  var stays = [
+    ['Perth', '2010 – 2012'], ['Sydney', '2013 – 2014'], ['London', '2015 – 2016'],
+    ['Barcelona', '2017 – 2018'], ['Cairns', '2019 – 2023'], ['Melbourne', '2024 – now']
+  ];
+  var box = document.getElementById('stays');
+  function count() {
+    var n = box.querySelectorAll('input:checked').length;
+    document.getElementById('shared').textContent = n;
+  }
+  stays.forEach(function (s) {
+    var label = document.createElement('label');
+    label.className = 'stay';
+    label.innerHTML = '<span class="txt"><b></b><span></span></span><input type="checkbox" checked>';
+    label.querySelector('b').textContent = s[0];
+    label.querySelector('.txt span').textContent = s[1];
+    var cb = label.querySelector('input');
+    cb.setAttribute('aria-label', 'Share ' + s[0] + ' with the group');
+    cb.addEventListener('change', function () { label.classList.toggle('off', !cb.checked); count(); });
+    box.appendChild(label);
+  });
+  document.getElementById('found').textContent = stays.length;
+  count();
+
+  var sources = document.querySelectorAll('.source');
+  sources.forEach(function (b) {
+    b.addEventListener('click', function () {
+      sources.forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+    });
+  });
+})();
+</script>
+</body>
+</html>

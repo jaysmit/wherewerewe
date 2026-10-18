@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where Were We — map your lives side by side</title>
+<meta name="description" content="A private map for friends and partners. Lay your lives side by side, slide through the years and find the cities you shared before you met.">
+<meta property="og:title" content="Where Were We">
+<meta property="og:description" content="Where were you, when I was here? A private map for friends and partners.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="wrap site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg></span>
+    <span class="brand-name">Where Were We</span>
+  </a>
+  <nav class="nav" aria-label="Main">
+    <a href="#how">How it works</a>
+    <a href="#privacy">Privacy</a>
+    <a class="btn btn-ghost btn-sm" href="map.html">See an example</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <span class="pill pill-you" style="align-self:flex-start">For best friends, old friends and partners</span>
+      <h1>Where were you, when I was <span class="grad-text">here?</span></h1>
+      <p class="lead">Lay your lives side by side on one little map. Slide through the years, find the cities you both lived in before you met, and ask the questions you never thought to.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="join.html">Start a map together</a>
+        <a class="btn btn-ghost" href="map.html">See an example</a>
+      </div>
+      <div class="trust">
+        <span class="avatars">
+          <span class="ring"><span style="background:var(--you)">Y</span></span>
+          <span class="ring"><span style="background:var(--sam)">S</span></span>
+          <span class="ring"><span style="background:var(--jo)">J</span></span>
+        </span>
+        Free for two. About two minutes each.
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="hero-frame">
+        <img src="img/hero.jpg" width="1536" height="1024" alt="A couple sitting on a sunlit bed, smiling as they point at places on a world map surrounded by polaroid photos" fetchpriority="high">
+        <div class="float-card">
+          <strong>Sydney, 2013</strong>
+          <span>You lived 4 km apart. You met in 2019.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <div class="panel">
+      <div class="panel-copy">
+        <h2>Two lives, one map</h2>
+        <p>Every dot is a city one of you called home. The yellow glow is where your paths crossed.</p>
+        <div class="pill-row"><span class="pill pill-you">You</span><span class="pill pill-sam">Sam</span></div>
+      </div>
+      <div class="map">
+        <img src="img/world-map.svg" alt="World map with two friends' paths">
+        <svg viewBox="0 0 1440 576" preserveAspectRatio="none" aria-hidden="true">
+          <polyline class="trail" stroke="#D62976" points="1183,463 1325,471 719,130 729,170 1303,404 1300,487"/>
+          <polyline class="trail" stroke="#4F5BD5" points="1419,483 1325,471 403,161 719,130 1325,471 1300,487"/>
+        </svg>
+        <span class="glow" style="left:92%;top:81.8%"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="wrap section-lg">
+    <h2 class="section-title">How it works</h2>
+    <div class="grid-3">
+      <div class="step t-orange"><span class="step-num">1</span><h3>Invite your person</h3><p>Send one link to a partner, a best friend or the old uni crew. Only people with the link can join.</p></div>
+      <div class="step t-pink"><span class="step-num">2</span><h3>Add your places</h3><p>Let us find them in your camera roll or Facebook check-ins, or just type the cities and years.</p></div>
+      <div class="step t-lilac"><span class="step-num">3</span><h3>Wander back together</h3><p>Slide through the years, spot the near misses, and use the prompts to swap the stories behind each place.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap section-lg">
+    <div class="grid-3">
+      <div class="story"><span class="kicker k-orange">Near miss</span><span class="big">London, 2015 — you and Jo</span><p>Same city, same winter, never met.</p></div>
+      <div class="story"><span class="kicker k-pink">Ask Sam</span><span class="big">“What made you leave Toronto?”</span><p>Prompts appear when someone moves.</p></div>
+      <div class="story"><span class="kicker k-blue">Closest you've been</span><span class="big">Melbourne, 2025 — you and Sam</span><p>After ten years in different cities.</p></div>
+    </div>
+  </section>
+
+  <section id="privacy" class="wrap section-lg">
+    <div class="privacy">
+      <div class="privacy-inner">
+        <div>
+          <h2>Just between you</h2>
+          <p>Each map is private to the people in it. There are no public profiles and no photo feeds.</p>
+        </div>
+        <ul class="privacy-list">
+          <li><span class="heart" style="color:var(--pink)">♥</span>Only city and year are kept, never photos</li>
+          <li><span class="heart" style="color:var(--purple)">♥</span>You choose which places each map sees</li>
+          <li><span class="heart" style="color:var(--blue)">♥</span>Photo scans happen on your phone</li>
+          <li><span class="heart" style="color:var(--jo)">♥</span>Leave a map and your places leave with you</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap site-footer">
+  <span>© <span id="yr">2026</span> Where Were We</span>
+  <span>Not affiliated with Instagram, Facebook or Meta.</span>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

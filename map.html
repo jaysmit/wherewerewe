@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The three of us — Where Were We</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="app">
+<header class="app-header">
+  <div class="left">
+    <a class="brand" href="index.html"><span class="brand-name" style="font-size:22px">Where Were We</span></a>
+    <span class="group-name">The three of us</span>
+    <span class="group-meta">Private · just you three</span>
+  </div>
+  <div class="right">
+    <div class="members" id="members" role="group" aria-label="Show or hide people"></div>
+    <a class="btn btn-primary btn-sm" href="join.html">+ Add places</a>
+  </div>
+</header>
+
+<div class="app-body">
+  <main class="app-main">
+    <div class="card card-lg">
+      <div class="year-head">
+        <div>
+          <span class="label">Where you all were in</span>
+          <span class="year-big" id="yearBig">2015</span>
+        </div>
+        <p class="headline" id="headline" aria-live="polite"></p>
+      </div>
+
+      <div class="map" id="map">
+        <img src="img/world-map.svg" alt="World map with each friend's path">
+        <svg viewBox="0 0 1440 576" preserveAspectRatio="none" aria-hidden="true" id="trails"></svg>
+      </div>
+
+      <div class="slider">
+        <button class="step-btn" id="prev" type="button" aria-label="Previous year">‹</button>
+        <div class="slider-track">
+          <label for="year" class="sr-only">Year</label>
+          <input id="year" type="range" min="2010" max="2026" step="1" value="2015">
+          <div class="ticks" aria-hidden="true"><span>2010</span><span>2014</span><span>2018</span><span>2022</span><span>Today</span></div>
+        </div>
+        <button class="step-btn" id="next" type="button" aria-label="Next year">›</button>
+      </div>
+    </div>
+
+    <section class="ask" aria-live="polite">
+      <div>
+        <span class="kicker">Ask each other</span>
+        <span class="q" id="prompt"></span>
+      </div>
+      <button type="button" id="shuffle">Another question</button>
+    </section>
+  </main>
+
+  <aside class="app-side">
+    <section class="card">
+      <h2>In <span id="yearSmall">2015</span>…</h2>
+      <div class="list" id="now"></div>
+    </section>
+    <section class="card">
+      <h2>How far apart</h2>
+      <div id="pairs" style="margin-top:6px"></div>
+    </section>
+    <section class="card">
+      <h2>Crossed paths</h2>
+      <p class="hint">Same city, same time, whether you knew it or not.</p>
+      <div class="list" id="crossings"></div>
+    </section>
+  </aside>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/map.js"></script>
+</body>
+</html>
